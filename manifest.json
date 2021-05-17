@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Jump-To-TabN",
   "short_name": "Jump-To-TabN",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "Jump to specific tab with shortcut keys",
   "author": "Sigo H, sigoden@gmail.com",
   "homepage_url": "https://github.com/sigoden/jump-to-tabs",
