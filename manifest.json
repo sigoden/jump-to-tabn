@@ -1,25 +1,21 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Jump-To-TabN",
   "short_name": "Jump-To-TabN",
   "version": "1.1.0",
-  "description": "Jump to specific tab with shortcut keys",
-  "author": "Sigo H, sigoden@gmail.com",
-  "homepage_url": "https://github.com/sigoden/jump-to-tabs",
+  "description": "Switch to specific browser tabs using keyboard shortcuts.",
+  "homepage_url": "https://github.com/sigoden/jump-to-tabn",
   "icons": {
     "128": "icons/128x128.png",
     "48": "icons/48x48.png",
     "16": "icons/16x16.png"
   },
   "background": {
-    "persistent": false,
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   },
-  "minimum_chrome_version": "55.0.2872.0",
   "permissions": [
     "tabs"
   ],
-  "offline_enabled": true,
   "commands": {
     "jump-tab-1": {
       "description": "Jump to tab 1"
