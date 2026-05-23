@@ -14,14 +14,27 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Build Chrome extension
+      - name: Build Chromium extension
         run: |
-          cd src
+          mkdir -p dist/chromium
+          cp -r src/* dist/chromium/
+          cd dist/chromium
+          rm -rf manifest-firefox.json
           zip -r ../jump-to-tabn-chromium.zip .
-          cd ..
+          cd ../..
+
+      - name: Build Firefox extension
+        run: |
+          mkdir -p dist/firefox
+          cp -r src/* dist/firefox/
+          cd dist/firefox
+          mv manifest-firefox.json manifest.json
+          zip -r ../jump-to-tabn-firefox.zip .
+          cd ../..
 
       - name: Release
         uses: softprops/action-gh-release@v3
         with:
           files: |
-            jump-to-tabn-chromium.zip
+            dist/jump-to-tabn-chromium.zip
+            dist/jump-to-tabn-firefox.zip
