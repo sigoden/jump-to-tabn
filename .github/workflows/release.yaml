@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Build Chrome extension
+        run: |
+          cd src
+          zip -r ../jump-to-tabn-chromium.zip .
+          cd ..
+
+      - name: Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: |
+            jump-to-tabn-chromium.zip
