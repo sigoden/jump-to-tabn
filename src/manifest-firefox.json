@@ -1,0 +1,54 @@
+{
+  "manifest_version": 2,
+  "name": "Jump-To-TabN",
+  "short_name": "Jump-To-TabN",
+  "version": "1.1.0",
+  "description": "Switch to specific browser tabs using keyboard shortcuts.",
+  "homepage_url": "https://github.com/sigoden/jump-to-tabn",
+  "icons": {
+    "128": "icons/128x128.png",
+    "48": "icons/48x48.png",
+    "16": "icons/16x16.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "commands": {
+    "jump-tab-1": {
+      "description": "Jump to tab 1"
+    },
+    "jump-tab-2": {
+      "description": "Jump to tab 2"
+    },
+    "jump-tab-3": {
+      "description": "Jump to tab 3"
+    },
+    "jump-tab-4": {
+      "description": "Jump to tab 4"
+    },
+    "jump-tab-5": {
+      "description": "Jump to tab 5"
+    },
+    "jump-tab-6": {
+      "description": "Jump to tab 6"
+    },
+    "jump-tab-7": {
+      "description": "Jump to tab 7"
+    },
+    "jump-tab-8": {
+      "description": "Jump to tab 8"
+    },
+    "jump-tab-9": {
+      "description": "Jump to last tab"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{d7b7c8d6-8f3a-4e2a-9b1c-3a5d7f9e2b8a}",
+      "strict_min_version": "57.0"
+    }
+  }
+}
